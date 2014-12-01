@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1413207038867.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "233214A8",
+    "lastKnownWriteTime" : 7741240723082584096,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "pg",
+        "contentUrl" : "content?title=pg&file=02415878f4894b9fa7f8757c31dba8d3.htm",
+        "displayedObservations" : "29",
+        "displayedVariables" : 4,
+        "totalObservations" : "29",
+        "variables" : "20"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

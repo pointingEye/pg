@@ -1,0 +1,16 @@
+{
+    "contents" : "first15sec <- function (){\n  \n#long version; works but cannot display result via view()...\npg <<- pg[\n  which(\n    pg$beats>=0    & pg$beats<15  |\n    pg$beats>=60   & pg$beats<75  |\n    pg$beats>=120  & pg$beats<135 |\n    pg$beats>=180  & pg$beats<195 |\n    pg$beats>=240  & pg$beats<255 |\n    pg$beats>=300  & pg$beats<315 |\n    pg$beats>=360  & pg$beats<375 |\n    pg$beats>=420  & pg$beats<435 |\n    pg$beats>=480  & pg$beats<495 |\n    pg$beats>=540  & pg$beats<555 |\n    pg$beats>=600  & pg$beats<615 |\n    pg$beats>=660  & pg$beats<675 |\n    pg$beats>=720  & pg$beats<735 |\n    pg$beats>=780  & pg$beats<795 |\n    pg$beats>=840  & pg$beats<855 |\n    pg$beats>=900  & pg$beats<915 |\n    pg$beats>=960  & pg$beats<975 |\n    pg$beats>=1020 & pg$beats<1035|\n    pg$beats>=1080 & pg$beats<1095|\n    pg$beats>=1140 & pg$beats<1155|\n    pg$beats>=1200 & pg$beats<1215 \n  ),\n]\n\nJHn <<- length (grep('JH', pg$coder))\nNSn <<- length (grep('NS', pg$coder)) \n\n}\n\n",
+    "created" : 1413276461337.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3426475351",
+    "id" : "312E6140",
+    "lastKnownWriteTime" : 1413364310,
+    "path" : "D:/Dokumente/stats/R/pg/1st15sec.R",
+    "project_path" : "1st15sec.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

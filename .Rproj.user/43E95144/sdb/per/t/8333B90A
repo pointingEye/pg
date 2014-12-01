@@ -1,0 +1,16 @@
+{
+    "contents" : "oneDataPrep <- function(){\n#create new columns for JH and NS\npg$V5 <- NA; pg$V6 <- NA; pg$V7 <- NA; pg$V8 <- NA; pg$V9 <- NA; pg$V10 <- NA; pg$V11 <- NA; pg$V12 <- NA; pg$V13 <- NA; pg$V14 <- NA; pg$V15 <- NA; pg$V16 <- NA; pg$V17 <- NA; pg$V18 <- NA; pg$V19 <- NA; pg$V20 <- NA\n\n#write column names for JH and NS\ncolnames(pg) <- c(\"coder\",\"NA\",\"beats\",\"hand\",\"nearBeat\",\"beatsOther\", \"dist\", \"distAbs\", \"distCat\", \"dist0f\", \"dist1f\", \"dist2f\", \"dist3f\", \"dist4f\", \"dist5f\", \"dist6f\", \"dist7f\", \"dist8f\", \"dist9f\", \"dist10f\")\n\n#set one vector to of each raters’ number observations\nJHn <<- length (grep('JH', pg$coder))\nNSn <<- length (grep('NS', pg$coder)) \n\n#write to columns “nearBeat” the value of the row number of the other rater value (“beat”) that is closest to the value of the jh rater of each row\npg$nearBeat <- sapply (1:(NSn+JHn), function(x) which(abs(pg$beats[(JHn+1):(NSn+JHn)]-pg$beats[x])==min(abs(pg$beats[(JHn+1):(NSn+JHn)]-pg$beats[x]))))\n\npg <<- pg\n}",
+    "created" : 1413275940259.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3003846807",
+    "id" : "8333B90A",
+    "lastKnownWriteTime" : 1413364308,
+    "path" : "D:/Dokumente/stats/R/pg/1dataPrep.R",
+    "project_path" : "1dataPrep.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
