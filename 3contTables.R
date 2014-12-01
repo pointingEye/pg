@@ -1,11 +1,12 @@
-threeContTables <- function (){
+threeContTables <- function (tolerance = 0:3, secCoded){
 
 #prepare for interrater test by a 2x2 table
 
 #input length of recording
 #secCoded <- 105 #fill in the stretch of video coded (by all raters) in the imported data by duration in seconds
-print(c("secCoded =", secCoded, "!!"))
-  
+#print(c("secCoded =", secCoded, "!!"))
+
+if(any(tolerance==0)) {
 print("0 FRAMES TOLERANCE")
 #both yes
 print(length(which(!is.na(pg$dist0f[1:JHn]))))
@@ -15,7 +16,9 @@ print(length(which(is.na(pg$dist0f[1:JHn]))))
 print(NSn - length(which(!is.na(pg$dist0f[1:JHn]))))
 #both no
 print((secCoded*24)- (length(which(!is.na(pg$dist0f[1:JHn]))) + length(which(is.na(pg$dist0f[1:JHn]))) + (NSn - length(which(!is.na(pg$dist0f[1:JHn]))))))
+}
 
+if(any(tolerance==1)) {
 print("1 FRAME TOLERANCE")
 #both yes
 print(length(which(!is.na(pg$dist1f[1:JHn]))))
@@ -25,7 +28,9 @@ print(length(which(is.na(pg$dist1f[1:JHn]))))
 print(NSn - length(which(!is.na(pg$dist1f[1:JHn]))))
 #both no
 print((secCoded*24/3)- (length(which(!is.na(pg$dist1f[1:JHn]))) + length(which(is.na(pg$dist1f[1:JHn]))) + (NSn - length(which(!is.na(pg$dist1f[1:JHn]))))))
+}
 
+if(any(tolerance==2)) {
 print("2 FRAMES TOLERANCE")
 #both yes
 print(length(which(!is.na(pg$dist2f[1:JHn]))))
@@ -35,7 +40,9 @@ print(length(which(is.na(pg$dist2f[1:JHn]))))
 print(NSn - length(which(!is.na(pg$dist2f[1:JHn]))))
 #both no
 print((secCoded*24/5)- (length(which(!is.na(pg$dist2f[1:JHn]))) + length(which(is.na(pg$dist2f[1:JHn]))) + (NSn - length(which(!is.na(pg$dist2f[1:JHn]))))))
+}
 
+if(any(tolerance==3)) {
 print("3 FRAMES TOLERANCE")
 #both yes
 print(length(which(!is.na(pg$dist3f[1:JHn]))))
@@ -45,5 +52,6 @@ print(length(which(is.na(pg$dist3f[1:JHn]))))
 print(NSn - length(which(!is.na(pg$dist3f[1:JHn]))) )
 #both no
 print((secCoded*24/7)- (length(which(!is.na(pg$dist3f[1:JHn]))) + length(which(is.na(pg$dist3f[1:JHn]))) + (NSn - length(which(!is.na(pg$dist3f[1:JHn]))))))
-
+}
+  
 }
